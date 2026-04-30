@@ -25,14 +25,30 @@ import yfinance as yf
 
 
 WATCHLIST: dict[str, list[str]] = {
-    "ai_compute":         ["NVDA", "AVGO", "MU", "SNDK", "AMD", "TSM", "MRVL", "ANET", "CIEN", "COHR", "SMCI", "DELL"],
-    "power_chain":        ["GEV", "VRT", "VST", "CEG", "OKLO", "POWL", "MYRG", "PRIM", "STRL", "ETN", "NVT", "BE"],
-    "energy_fuel":        ["CCJ", "UEC", "NXE", "DNN", "LEU", "UUUU", "FCX", "SCCO", "TECK", "COPX", "XOM", "CVX"],
-    "critical_minerals":  ["ALB", "SQM", "LIT", "MP", "USAR", "LAC", "SGML", "LYC.AX", "ARRY"],
-    "defense_aero":       ["RKLB", "KTOS", "AVAV", "ONDS", "LMT", "RTX", "NOC", "ACHR", "JOBY", "LDOS", "BWXT", "SPCE"],
-    "china_edge_apps":    ["QCOM", "AAPL", "KWEB", "BABA", "BIDU", "PDD", "ARM", "NTNX", "PSTG", "SYM", "IONQ"],
-    "breadth_macro":      ["SPY", "QQQ", "IWM", "^VIX", "^SOX", "SMH", "DX-Y.NYB", "^TNX", "HG=F", "CL=F", "GLD", "BTC-USD"],
-    "portfolio":          ["NVDA", "TSLA", "TEM", "GOOG", "PLTR", "INTC", "VST", "COPX", "ARKX", "QQQ", "CRCL"],
+    "watchlist": [
+        "^SOX", "^TNX", "^VIX", "002050.SZ",
+        "ACHR", "ALNT", "AMD", "AMZN", "ANET", "APP", "AVAV", "AVGO",
+        "BE", "BOTT", "BTC-USD", "BWXT",
+        "CEG", "CGNX", "CIEN", "CL=F", "CMI", "COHR", "CRM", "CRWD", "CRWV",
+        "DDOG", "DELL", "DLR", "DX-Y.NYB",
+        "EQIX", "ETN",
+        "FANUY",
+        "GEV", "GLD", "GNRC", "GOOG",
+        "HG=F",
+        "ISRG", "IWM",
+        "JOBY",
+        "KTOS",
+        "LDOS", "LMT",
+        "MDB", "META", "MOG-A", "MRVL", "MSFT", "MU", "MYRG",
+        "NBIS", "NJDCY", "NOC", "NOW", "NVDA", "NVT",
+        "OKLO", "ONDS", "ORCL", "OUST",
+        "PLTR", "POWL",
+        "QQQ",
+        "RKLB", "ROK", "RTX",
+        "SMCI", "SMH", "SNDK", "SNOW", "SPCE", "SPY", "STRL", "SYM",
+        "TEM", "TER", "TSLA", "TSM",
+        "VICR", "VRT", "VST",
+    ],
 }
 
 REPO_ROOT = Path(__file__).resolve().parent.parent

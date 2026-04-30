@@ -1,6 +1,6 @@
 # wayne-watchlist-data
 
-每日抓取一份多群股票 watchlist(~87 支標的)的價格與技術指標,寫成 JSON 後透過
+每日抓取一份股票 watchlist(~80 支標的)的價格與技術指標,寫成 JSON 後透過
 GitHub Pages 公開,供另一個 AI(Claude Routine)以固定 URL 消費。
 
 ## 公開端點
@@ -99,20 +99,34 @@ notation(`obj["1m_pct"]`),不是 `obj.1m_pct`。
 }
 ```
 
-## Watchlist groups
+## Watchlist
 
-8 個 group(同一 ticker 可橫跨多 group;`all` 會去重)。
+單一 group `watchlist`,共 80 支標的(無重複;Claude Routine 直接讀 `groups.watchlist` 或 `all` 都行,內容相同)。
 
-| group | tickers |
-|---|---|
-| `ai_compute` | NVDA, AVGO, MU, SNDK, AMD, TSM, MRVL, ANET, CIEN, COHR, SMCI, DELL |
-| `power_chain` | GEV, VRT, VST, CEG, OKLO, POWL, MYRG, PRIM, STRL, ETN, NVT, BE |
-| `energy_fuel` | CCJ, UEC, NXE, DNN, LEU, UUUU, FCX, SCCO, TECK, COPX, XOM, CVX |
-| `critical_minerals` | ALB, SQM, LIT, MP, USAR, LAC, SGML, LYC.AX, ARRY |
-| `defense_aero` | RKLB, KTOS, AVAV, ONDS, LMT, RTX, NOC, ACHR, JOBY, LDOS, BWXT, SPCE |
-| `china_edge_apps` | QCOM, AAPL, KWEB, BABA, BIDU, PDD, ARM, NTNX, PSTG, SYM, IONQ |
-| `breadth_macro` | SPY, QQQ, IWM, ^VIX, ^SOX, SMH, DX-Y.NYB, ^TNX, HG=F, CL=F, GLD, BTC-USD |
-| `portfolio` | NVDA, TSLA, TEM, GOOG, PLTR, INTC, VST, COPX, ARKX, QQQ, CRCL |
+```
+^SOX, ^TNX, ^VIX, 002050.SZ,
+ACHR, ALNT, AMD, AMZN, ANET, APP, AVAV, AVGO,
+BE, BOTT, BTC-USD, BWXT,
+CEG, CGNX, CIEN, CL=F, CMI, COHR, CRM, CRWD, CRWV,
+DDOG, DELL, DLR, DX-Y.NYB,
+EQIX, ETN,
+FANUY,
+GEV, GLD, GNRC, GOOG,
+HG=F,
+ISRG, IWM,
+JOBY,
+KTOS,
+LDOS, LMT,
+MDB, META, MOG-A, MRVL, MSFT, MU, MYRG,
+NBIS, NJDCY, NOC, NOW, NVDA, NVT,
+OKLO, ONDS, ORCL, OUST,
+PLTR, POWL,
+QQQ,
+RKLB, ROK, RTX,
+SMCI, SMH, SNDK, SNOW, SPCE, SPY, STRL, SYM,
+TEM, TER, TSLA, TSM,
+VICR, VRT, VST
+```
 
 ## 更新 watchlist
 
