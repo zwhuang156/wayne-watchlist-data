@@ -6,5 +6,6 @@ venv/
 .DS_Store
 *.log
 
-# Claude Code local session state
-.claude/
+# Claude Code local session state — keep settings.json (for Claude Routine), ignore the rest
+.claude/*
+!.claude/settings.json
