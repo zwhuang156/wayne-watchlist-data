@@ -147,10 +147,13 @@ def fetch_one(symbol: str) -> dict:
         "ma200": _round(ma200),
         "ma50_distance_pct": _round(ma50_distance_pct, 2),
         "ma200_distance_pct": _round(ma200_distance_pct, 2),
+        "1d_pct": _round(_pct_from_offset(close, 1), 2),
+        "1w_pct": _round(_pct_from_offset(close, 7), 2),
         "1m_pct": _round(_pct_from_offset(close, 30), 2),
         "3m_pct": _round(_pct_from_offset(close, 90), 2),
         "ytd_pct": _round(_pct_from_ytd(close), 2),
-        "1y_pct": _round(_pct_from_offset(close, 365), 2),
+        # period="1y" 約 252 交易日,用首筆當基準避免 365 天 offset 落在序列之前
+        "1y_pct": _round(float((close.iloc[-1] / close.iloc[0] - 1.0) * 100.0), 2),
         "rsi_14": _round(_rsi_14(close), 2),
     }
 

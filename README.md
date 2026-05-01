@@ -66,10 +66,12 @@ Repo 頁面 → **Actions** → 左側 **daily-fetch** → 右上 **Run workflow
 | `ma200` | float \| null | 200 日均線。資料 < 200 天時為 null |
 | `ma50_distance_pct` | float \| null | `(price - ma50) / ma50 * 100`。正 = 在 ma50 之上 |
 | `ma200_distance_pct` | float \| null | 同上,基準 ma200 |
+| `1d_pct` | float \| null | 1 日漲跌幅(%),即今日相對前一交易日收盤(週一則為相對上週五) |
+| `1w_pct` | float \| null | 7 日漲跌幅(%) |
 | `1m_pct` | float \| null | 30 日漲跌幅(%) |
 | `3m_pct` | float \| null | 90 日漲跌幅(%) |
 | `ytd_pct` | float \| null | 年初至今漲跌幅(%) |
-| `1y_pct` | float \| null | 365 日漲跌幅(%) |
+| `1y_pct` | float \| null | 約 1 年漲跌幅(%);以 1y 歷史首筆 close 為基準,實際約 252 交易日 |
 | `rsi_14` | float \| null | 14 日 RSI(Wilder's smoothing),0–100。資料 < 15 天時為 null |
 
 ⚠️ **注意**:`1m_pct` / `3m_pct` / `ytd_pct` / `1y_pct` 以數字開頭,JS / Python 取值要用 bracket
@@ -91,6 +93,8 @@ notation(`obj["1m_pct"]`),不是 `obj.1m_pct`。
   "ma200": 183.3395,
   "ma50_distance_pct": 13.31,
   "ma200_distance_pct": 15.07,
+  "1d_pct": 0.84,
+  "1w_pct": 3.21,
   "1m_pct": 25.92,
   "3m_pct": 10.14,
   "ytd_pct": 11.7,
