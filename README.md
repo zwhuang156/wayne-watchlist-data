@@ -105,32 +105,36 @@ notation(`obj["1m_pct"]`),不是 `obj.1m_pct`。
 
 ## Watchlist
 
-單一 group `watchlist`,共 80 支標的(無重複;Claude Routine 直接讀 `groups.watchlist` 或 `all` 都行,內容相同)。
+單一 group `watchlist`,共 95 支標的(無重複;Claude Routine 直接讀 `groups.watchlist` 或 `all` 都行,內容相同)。
 
 ```
-^SOX, ^TNX, ^VIX, 002050.SZ,
+^SOX, ^TNX, ^VIX,
+000660.KS, 002050.SZ, 005930.KS, 042700.KS,
 ACHR, ALNT, AMD, AMZN, ANET, APP, AVAV, AVGO,
-BE, BOTT, BTC-USD, BWXT,
-CEG, CGNX, CIEN, CL=F, CMI, COHR, CRM, CRWD, CRWV,
+BE, BESIY, BOTT, BTC-USD, BWXT,
+CAMT, CEG, CGNX, CIEN, CL=F, CMI, COHR, CRM, CRWD, CRWV,
 DDOG, DELL, DLR, DX-Y.NYB,
 EQIX, ETN,
-FANUY,
+FANUY, FORM,
 GEV, GLD, GNRC, GOOG,
 HG=F,
 ISRG, IWM,
 JOBY,
-KTOS,
+KEYS, KLAC, KLIC, KTOS,
 LDOS, LMT,
-MDB, META, MOG-A, MRVL, MSFT, MU, MYRG,
+MDB, META, MKSI, MOG-A, MRVL, MSFT, MU, MYRG,
 NBIS, NJDCY, NOC, NOW, NVDA, NVT,
-OKLO, ONDS, ORCL, OUST,
+OKLO, ONDS, ONTO, ORCL, OUST,
 PLTR, POWL,
 QQQ,
 RKLB, ROK, RTX,
-SMCI, SMH, SNDK, SNOW, SPCE, SPY, STRL, SYM,
+SMCI, SMH, SNDK, SNOW, SPCE, SPY, STRL, STX, SYM,
 TEM, TER, TSLA, TSM,
-VICR, VRT, VST
+VIAV, VICR, VRT, VST,
+WDC
 ```
+
+⚠️ **計價幣別**:`price` / `ath_52w` / `low_52w` 等以 Yahoo 原始幣別輸出。美股 = USD,韓股(`*.KS`)= KRW,陸股(`*.SZ`)= CNY,加密貨幣(`BTC-USD`)= USD。需要跨市場比較請自行換匯。
 
 ## 更新 watchlist
 
